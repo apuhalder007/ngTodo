@@ -1,0 +1,9 @@
+<div class="col-sm">
+  <div class="todolist">
+   <h5> List</h5>
+      <ul id="done-items" class="list-unstyled">
+          <li *ngFor="let todo of todos">{{todo}}   <i class="fa fa-pencil" (click)="editTodo(todo)"></i>   <i class="fa fa-remove" (click)="deleteTodo(todo)"></i></li>
+          
+      </ul>
+  </div>
+</div>

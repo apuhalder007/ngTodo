@@ -1,0 +1,24 @@
+
+<div class="col-sm" *ngIf="!_isEditItem">
+  <div class="todolist not-done">
+      <h5>Add</h5>
+      <form (ngSubmit)="AddTodo(f)" #f="ngForm">
+          <input type="text" name="todo" [(ngModel)]="todo" class="form-control add-todo" placeholder="Add todo">
+          <button id="checkAll" type="submit" class="btn btn-success">Add</button>
+          <hr>
+      </form>
+          
+  </div>
+</div>
+
+<div class="col-sm" *ngIf="_isEditItem">
+  <div class="todolist not-done">
+      <h5>Edit</h5>
+      <form (ngSubmit)="EditTodo(f)" #f="ngForm">
+          <input type="text" name="todo" [(ngModel)]="todo" class="form-control add-todo" placeholder="Add todo">
+          <button id="checkAll" type="submit" class="btn btn-success">Update</button>
+          <hr>
+      </form>
+          
+  </div>
+</div>
